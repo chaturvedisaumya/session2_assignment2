@@ -1,0 +1,11 @@
+# task 1
+#Create a file max-temp.txt in local FS.Put some 10-15 records of date and temperature example:dd-mm-yyyy,temperature
+gedit max-temp.txt
+#Move this file to HDFS at /user/acadgild/hadoop.
+hadoop fs -put max-temp.txt /hadoop/
+#we can see the content by below command
+hadoop fs -cat /hadoop/max-temp.txt
+#Change the permission of the file /user/acadgild/hadoop/max-temp.txt, such that only the owner and the group members have full control over the file.
+hadoop fs -chmod 777 /hadoop/max-temp.txt
+# can check permissions by below command
+hadoop fs -ls /hadoop
